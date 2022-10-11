@@ -10,6 +10,105 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <header class="header section">
+
+        <div class="container header__container">
+            <div class="row-center">
+
+                <picture class="header__logo">
+                    <source media="(max-width: 991px)" srcset="img/logoM.png">
+                    <img src="img/logo.png" alt="Feniks">
+                </picture>
+
+                <nav class="header__nav">
+                    <a href="#" class="header__link">О нас</a>
+                    <a href="#" class="header__link">Аренда</a>
+                    <a href="#" class="header__link">Продажа</a>
+                    <a href="#" class="header__link">Новости</a>
+                    <a href="#" class="header__link">Контакты</a>
+                </nav>
+
+                <button class="button header__button"><img src="img/tel.png" alt="tel">Бесплатный звонок</button>
+
+                <div class="header__burger">
+                    <div class="header__burger__line"></div>
+                    <div class="header__burger__line"></div>
+                    <div class="header__burger__line"></div>
+                    <div class="header__burger__line"></div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- /.header section -->
+
+    <main>
+
+        <section class="section main">
+
+            <div class="container main__container">
+                <div class="row-center main__row">
+                    <div class="main__box">
+                        <h1 class="main__title">Путешествуйте <br> с комфортом!</h1>
+                        <p class="main__text">Дополнительные скидки на аренду квартиры до 30% + бесплатный трансфер до дома!</p>
+                        <button class="button main__button">Подробнее</button>
+                    </div>
+
+                    <div class="main__play">
+                        <picture class="main__play__button">
+                            <source media="(max-width: 991px)" srcset="img/main/playM.png">
+                            <img src="img/main/play.png" alt="play">
+                        </picture>
+                        <picture class="main__play__arrow">
+                            <source media="(max-width: 991px)" srcset="img/main/arrowM.png">
+                            <img src="img/main/arrow.png" alt="arrow">
+                        </picture>
+                        <span>Смотреть промо-ролик</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- /.section main -->
+
+    </main>
+
+    <div class="menu">
+        <div class="menu__dialog">
+            <img data-menuClose class="menu__close" src="img/close.png" alt="close">
+            <div class="menu__box">
+                <img class="menu__logo" src="img/logo.png" alt="logo">
+                <nav class="menu__nav">
+                    <a data-menuClose href="#" class="menu__link">О нас</a>
+                    <a data-menuClose href="#" class="menu__link">Аренда</a>
+                    <a data-menuClose href="#" class="menu__link">Продажа</a>
+                    <a data-menuClose href="#" class="menu__link">Новости</a>
+                    <a data-menuClose href="#" class="menu__link">Контакты</a>
+                </nav>
+            </div>
+
+            <div>
+                <a href="tel:0 (534) 085 27 30" class="menu__tel"><img src="img/tel.png" alt="tel">0 (534) 085 27 30</a>
+
+                <div class="menu__footer">
+                    <a href="#" class="menu__footer__link">
+                        <img src="img/menu/icon1.png" alt="telegram">
+                    </a>
+                    <a href="#" class="menu__footer__link">
+                        <img src="img/menu/icon2.png" alt="whatsapp">
+                    </a>
+                    <a href="#" class="menu__footer__link">
+                        <img src="img/menu/icon3.png" alt="instagram">
+                    </a>
+                    <a href="#" class="menu__footer__link">
+                        <img src="img/menu/icon4.png" alt="facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <script src="js/script.js"></script>
 </body>
 </html>

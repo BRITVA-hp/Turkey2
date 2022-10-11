@@ -1,1 +1,66 @@
-// @media screen and ( max-width: 1200px )
+@media screen and ( max-width: 1200px )
+    .main
+        &__title
+            font-size: 48px
+
+    .header
+        &__link
+            margin-right: 30px
+
+@media screen and ( max-width: 991px )
+    .main
+        padding-top: 154px
+        padding-bottom: 250px
+        background: url(../img/main/bgC.webp) no-repeat center bottom
+        &__play
+            margin-right: 80px
+            &__arrow
+                margin: 0 10px 0 22px
+        &__title
+            font-size: 29px
+            margin-bottom: 22px
+        &__text
+            font-size: 12px
+            max-width: 270px
+            margin-bottom: 40px
+        &__button
+            font-size: 12px
+            height: 63px
+            width: 220px
+
+    .menu
+        display: flex
+
+    .header
+        margin-bottom: -91px
+        &__nav
+            display: none
+        &__button
+            display: none
+        &__burger
+            display: flex
+
+@media screen and ( max-width: 767px )
+    .main
+        background: url(../img/main/bgM.webp) no-repeat center bottom
+        padding-bottom: 240px
+        &__text
+            margin-left: auto
+            margin-right: auto
+        &__button
+            margin: auto
+        &__box
+            margin-bottom: 50px
+            text-align: center
+        &__play
+            font-size: 12px
+            margin: 0
+        &__row
+            flex-direction: column
+
+@media screen and ( max-height: 750px )
+    .menu
+        &__dialog
+            padding: 88px 50px 50px
+        &__logo
+            margin-bottom: 40px
