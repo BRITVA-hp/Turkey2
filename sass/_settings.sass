@@ -63,6 +63,42 @@ body
             z-index: 3
             animation: toRight 6s infinite
 
+.button-r
+    position: relative
+    width: 460px
+    height: 76px
+    background: transparent
+    border: none
+    cursor: pointer
+    transition: 0.3s
+    font-weight: 500
+    font-size: 18px
+    line-height: 130%
+    letter-spacing: 0.02em
+    text-transform: uppercase
+    color: #393939
+    &:hover
+        transform: scale(1.03)
+    .path
+        transform: rotate(180deg) translate(-100%, -100%)
+    svg
+        width: 100%
+        height: 100%
+    span
+        position: absolute
+        z-index: 2
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+    &__wrap
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%)
+        clip-path: url(#svgPath)
+
 .textarea
     resize: none
     width: 100%
