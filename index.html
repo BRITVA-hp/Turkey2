@@ -11,6 +11,17 @@
 </head>
 <body>
 
+    <svg style="visibility: hidden; position: fixed;" width="0" height="0">
+        <defs>
+            <linearGradient id="cl1" gradientUnits="objectBoundingBox" x1="0" y1="0.5" x2="1" y2="0.5">
+                <stop stop-color="#AA8A5D"/>
+                <stop offset="20%" stop-color="#EFC484"/>
+                <stop offset="80%" stop-color="#C9A36F"/>
+                <stop offset="100%" stop-color="#AA8A5D"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
     <header class="header section">
 
         <div class="container header__container">
@@ -52,47 +63,38 @@
                     <div class="main__box">
                         <h1 class="main__title">Путешествуйте <br> с комфортом!</h1>
                         <p class="main__text">Дополнительные скидки на аренду квартиры до 30% + бесплатный трансфер до дома!</p>
-                        <button class="button-r main__button">
+                        <button data-modal class="button-r main__button">
                             <span>Подробнее</span>
                             <div class="button-r__wrap">
 
                             <svg>
-                              <clipPath id="svgPath">
-                                <path
-                                      d="M 5,8
-                                         Q 0,38 5,66
-                                         L 15,66
-                                         L 15,10" 
-                                      />
-                                <circle cx="15" cy="10" r="10"></circle>
-                                <circle cx="15" cy="66" r="10"></circle>
-                                <circle cx="calc(100% - 15px)" cy="10" r="10"></circle>
-                                <circle cx="calc(100% - 15px)" cy="66" r="10"></circle>
-                                <path class="path"
-                                      d="M 5,8
-                                         Q 0,38 5,66
-                                         L 15,66
-                                         L 15,10" 
-                                      />
-                                <rect x="15" width="calc(100% - 30px)" height="100%" />
-                              </clipPath>
+                                <clipPath id="svgPathMain">
+                                    <path d="M 15,0
+                                        Q 5,0 5,10
+                                        Q 0,38 5,66
+                                        Q 5,76 15,76"
+                                    />
+                                    <path class="path" d="M 15,0
+                                        Q 5,0 5,10
+                                        Q 0,38 5,66
+                                        Q 5,76 15,76"
+                                    />
+                                    <rect x="15" width="calc(100% - 30px)" height="100%" />
+                                </clipPath>
                             </svg>
 
                             <svg>
-                                <clipPath id="svgPathM">
-                                  <path
-                                        d="M 5,8
-                                           Q 0,38 5,56
-                                           L 15,56
-                                           L 15,10" 
-                                        />
-                                  <circle cx="15" cy="10" r="10"></circle>
-                                  <circle cx="15" cy="56" r="10"></circle>
-                                  <circle cx="calc(100% - 15px)" cy="10" r="10"></circle>
-                                  <circle cx="calc(100% - 15px)" cy="56" r="10"></circle>
-                                  <path class="path"
-                                        d="M 5,8 Q 0,38 5,56 L 15,56 L 15,10"
-                                        />
+                                <clipPath id="svgPathMainM">
+                                    <path d="M 15,0
+                                        Q 5,0 5,10
+                                        Q 0,33 5,56
+                                        Q 5,66 15,66"
+                                    />
+                                    <path class="path" d="M 15,0
+                                        Q 5,0 5,10
+                                        Q 0,33 5,56
+                                        Q 5,66 15,66"
+                                    />
                                   <rect x="15" width="calc(100% - 30px)" height="100%"/>
                                 </clipPath>
                             </svg>
@@ -116,6 +118,71 @@
 
         </section>
         <!-- /.section main -->
+
+        <section class="section advantages">
+
+            <div class="container advantages__container">
+
+                <div class="advantages__card">
+                    <div class="advantages__card__img">
+                        <img src="img/advantages/icon1.png" alt="icon">
+                    </div>
+                    <p class="advantages__card__text"><span>Команда профессионалов</span> с опытом работы</p>
+                </div>
+
+                <div class="advantages__card">
+                    <div class="advantages__card__img">
+                        <img src="img/advantages/icon2.png" alt="icon">
+                    </div>
+                    <p class="advantages__card__text"><span>Гарантия доступных</span> цен на базу объектов</p>
+                </div>
+
+                <div class="advantages__card">
+                    <div class="advantages__card__img">
+                        <img src="img/advantages/icon3.png" alt="icon">
+                    </div>
+                    <p class="advantages__card__text">Наличие <span>постоянно пополняемой</span> и обновляемой базы</p>
+                </div>
+
+                <div class="advantages__card">
+                    <div class="advantages__card__img">
+                        <img src="img/advantages/icon4.png" alt="icon">
+                    </div>
+                    <p class="advantages__card__text"><span>Надежная и прозрачная сделка</span></p>
+                </div>
+
+                <div class="advantages__card">
+                    <div class="advantages__card__img">
+                        <img src="img/advantages/icon5.png" alt="icon">
+                    </div>
+                    <p class="advantages__card__text">Гибкий и <span>индивидуальный подход</span> к каждому клиенту</p>
+                </div>
+
+                <div class="advantages__card">
+                    <div class="advantages__card__img">
+                        <img src="img/advantages/icon6.png" alt="icon">
+                    </div>
+                    <p class="advantages__card__text"><span>Оценочная экспертиза</span></p>
+                </div>
+
+                <div class="advantages__card">
+                    <div class="advantages__card__img">
+                        <img src="img/advantages/icon7.png" alt="icon">
+                    </div>
+                    <p class="advantages__card__text"><span>Полное сопровождение</span> на всех этапах сделки</p>
+                </div>
+
+                <div class="advantages__card">
+                    <div class="advantages__card__img">
+                        <img src="img/advantages/icon8.png" alt="icon">
+                    </div>
+                    <p class="advantages__card__text"><span>Послепродажная поддержка</span></p>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /.section advantages -->
 
     </main>
 
@@ -151,6 +218,108 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="modal modal-main">
+        <div class="modal__container">
+            <form action="#" class="modal-main__dialog">
+
+                <picture class="modal-main__close">
+                    <source media="(max-width: 991px)" srcset="img/close.png">
+                    <img src="img/modal/closeWhite.png" alt="close">
+                </picture>
+
+                <div class="modal-main__wrap">
+                    <h3 class="modal-main__title">Обратный звонок</h3>
+                    <p class="modal-main__text">Дополнительные скидки на аренду квартиры до 30% + бесплатный трансфер до дома. Получите горячие предложения прямо сейчас!</p>
+                    <div class="modal-main__box">
+                        <div class="input-group modal-main__input-group">
+                            <label class="modal-main__label label" for="modalName">Ваше имя*</label>
+                            <div class="modal-main__input-wrap input-wrap">
+                                <input placeholder="Имя" id="modalName" type="text" class="input-r moda-main__input">
+                                <svg class="input-wrap__svg" fill="none">
+                                    <path d="M 15,0
+                                            Q 5,0 5,10
+                                            Q 0,38 5,66
+                                            Q 5,76 15,76"
+                                            />
+                                    <rect x="15" y="0" width="calc(100% - 30px)" height="0.5" />
+                                    <rect x="15" y="76" width="calc(100% - 30px)" height="0.5" />
+                                    <path class="path" d="M 15,0
+                                                            Q 5,0 5,10
+                                                            Q 0,38 5,66
+                                                            Q 5,76 15,76" 
+                                            />
+                                    <line x1="15" y1="0" x2="calc(100% - 15px)" y2="0" />
+                                </svg>
+                            
+                            </div>
+                        </div>
+
+                        <div class="input-group modal-main__input-group">
+                            <label class="modal-main__label label" for="modalTel">Ваше телефон*</label>
+                            <div class="modal-main__input-wrap input-wrap">
+                                <input placeholder="+_ (___) ___ - __-__" id="modalTel" type="tel" class="input-r moda-main__input">
+                                <svg class="input-wrap__svg" fill="none">
+                                    <path d="M 15,0
+                                            Q 5,0 5,10
+                                            Q 0,38 5,66
+                                            Q 5,76 15,76"
+                                            />
+                                    <rect x="15" y="0" width="calc(100% - 30px)" height="0.5" />
+                                    <rect x="15" y="76" width="calc(100% - 30px)" height="0.5" />
+                                    <path class="path" d="M 15,0
+                                                            Q 5,0 5,10
+                                                            Q 0,38 5,66
+                                                            Q 5,76 15,76" 
+                                            />
+                                    <line x1="15" y1="0" x2="calc(100% - 15px)" y2="0" />
+                                </svg>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="button-r modal-main__button">
+                        <span>Подробнее</span>
+                        <div class="button-r__wrap">
+                            <svg>
+                                <clipPath id="svgPathModal">
+                                    <path d="M 15,0
+                                        Q 5,0 5,10
+                                        Q 0,38 5,66
+                                        Q 5,76 15,76"
+                                    />
+                                    <path class="path" d="M 15,0
+                                        Q 5,0 5,10
+                                        Q 0,38 5,66
+                                        Q 5,76 15,76"
+                                    />
+                                    <rect x="15" width="calc(100% - 30px)" height="100%" />
+                                </clipPath>
+                            </svg>
+
+                            <svg>
+                                <clipPath id="svgPathModalM">
+                                    <path d="M 15,0
+                                        Q 5,0 5,10
+                                        Q 0,33 5,56
+                                        Q 5,66 15,66"
+                                    />
+                                    <path class="path" d="M 15,0
+                                        Q 5,0 5,10
+                                        Q 0,33 5,56
+                                        Q 5,66 15,66"
+                                    />
+                                <rect x="15" width="calc(100% - 30px)" height="100%"/>
+                                </clipPath>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+            </form>
         </div>
     </div>
         

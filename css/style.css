@@ -455,8 +455,6 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%);
-  -webkit-clip-path: url(#svgPath);
-  clip-path: url(#svgPath);
 }
 
 .textarea {
@@ -496,10 +494,52 @@ body {
   outline: none;
 }
 
+.input-r {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: rgba(64, 64, 64, 0.5);
+  border: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.input-r:focus {
+  outline: none;
+}
+
+.input-wrap {
+  height: 76px;
+  width: 200px;
+  position: relative;
+}
+.input-wrap__svg {
+  width: 100%;
+  height: 100%;
+  stroke: url(#cl1);
+}
+.input-wrap .path {
+  transform: rotate(180deg) translate(-100%, -100%);
+}
+
 .input-group {
   width: 100%;
   margin-bottom: 15px;
   position: relative;
+}
+
+.label {
+  font-weight: bold;
+  display: block;
+  font-size: 16px;
+  line-height: 130%;
+  color: #404040;
 }
 
 .section {
@@ -628,6 +668,89 @@ body {
 .main__button {
   width: 260px;
   font-size: 14px;
+  -webkit-clip-path: url(#svgPathMain);
+  clip-path: url(#svgPathMain);
+}
+
+.modal {
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.modal--active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal__container {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+.modal-main__input-group {
+  margin-bottom: 30px;
+}
+.modal-main__input-group:last-child {
+  margin-bottom: 50px;
+}
+.modal-main__input-wrap {
+  width: 100%;
+}
+.modal-main__label {
+  margin-bottom: 14px;
+  padding-left: 8px;
+}
+.modal-main__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: #5F6264;
+  margin-bottom: 45px;
+}
+.modal-main__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 130%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.modal-main__wrap {
+  max-width: 460px;
+}
+.modal-main__dialog {
+  background: url(../img/modal/bg.png) no-repeat 425px center, #fff;
+  border-radius: 80px;
+  position: relative;
+  padding: 100px;
+  width: 100%;
+  max-width: 1160px;
+}
+.modal-main__button {
+  width: 100%;
+  max-width: 385px;
+  -webkit-clip-path: url(#svgPathModal);
+  clip-path: url(#svgPathModal);
+}
+.modal-main__close {
+  cursor: pointer;
+  position: absolute;
+  top: 70px;
+  right: 70px;
 }
 
 .menu {
@@ -729,12 +852,17 @@ body {
   }
 }
 @media screen and (max-width: 991px) {
-  .button-r {
-    height: 66px;
+  .modal-main__title {
+    font-size: 25px;
   }
-  .button-r__wrap {
-    -webkit-clip-path: url(#svgPathM);
-    clip-path: url(#svgPathM);
+  .modal-main__close {
+    top: 33px;
+    right: 33px;
+  }
+  .modal-main__dialog {
+    max-width: 400px;
+    border-radius: 40px;
+    padding: 85px 25px;
   }
   .main {
     padding-top: 154px;
@@ -759,6 +887,9 @@ body {
   .main__button {
     font-size: 12px;
     width: 220px;
+    -webkit-clip-path: url(#svgPathMainM);
+    clip-path: url(#svgPathMainM);
+    height: 66px;
   }
   .menu {
     display: flex;

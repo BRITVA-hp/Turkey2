@@ -8,10 +8,17 @@
             margin-right: 30px
 
 @media screen and ( max-width: 991px )
-    .button-r
-        height: 66px
-        &__wrap
-            clip-path: url(#svgPathM)
+    .modal
+        &-main
+            &__title
+                font-size: 25px
+            &__close
+                top: 33px
+                right: 33px
+            &__dialog
+                max-width: 400px
+                border-radius: 40px
+                padding: 85px 25px
 
     .main
         padding-top: 154px
@@ -31,6 +38,8 @@
         &__button
             font-size: 12px
             width: 220px
+            clip-path: url(#svgPathMainM)
+            height: 66px
 
     .menu
         display: flex
