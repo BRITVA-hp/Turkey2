@@ -1,5 +1,29 @@
 @media screen and ( max-width: 1200px )
+    .we
+        &__img
+            margin-bottom: 65px
+            &::before
+                left: 0
+                bottom: -22px
+        &__row
+            flex-direction: column
+
+    .advantages
+        &__container
+            max-width: 910px
+        &__card
+            &::before
+                transform: skew(0, 10deg) !important
+            &--hidden
+                display: none
+
+    @for $i from 1 to 7
+        $val: ($i - 1) * 26
+        .advantages__card:nth-child(#{$i})
+            transform: translateY(#{$val}px)
+
     .main
+        margin-bottom: -420px
         &__title
             font-size: 48px
 
@@ -8,6 +32,62 @@
             margin-right: 30px
 
 @media screen and ( max-width: 991px )
+    // settings
+    .section
+        &__title
+            font-size: 20px
+    // settings
+
+    .we
+        &__img
+            &::before
+                border-radius: 32px
+        &__title
+            margin-bottom: 50px
+            max-width: 350px
+        &__box
+            font-size: 16px
+            max-width: 360px
+        &__text
+            margin-bottom: 10px
+        &__li
+            margin-bottom: 10px
+
+    .advantages
+        margin-bottom: 100px
+        &__footer
+            justify-content: center
+        &__container
+            max-width: 552px
+        &__card
+            width: 164px
+            min-height: 195px
+            padding: 40px 20px 10px 25px
+            &__img
+                width: 52px
+                height: 52px
+                border-radius: 12px
+                margin-bottom: 10px
+            &__text
+                font-size: 13px
+        &__row
+            gap: 50px 30px
+
+    @for $i from 1 to 6
+        $val: ($i - 1) * 26
+        .advantages__card:nth-child(#{$i})
+            transform: translateY(#{$val}px)
+
+    @for $i from 6 to 9
+        $val: ($i - 5) * 26
+        .advantages__card:nth-child(#{$i})
+            transform: translateY(#{$val}px)
+
+    @for $i from 9 to 11
+        $val: ($i - 8) * 26
+        .advantages__card:nth-child(#{$i})
+            transform: translateY(#{$val}px)
+
     .modal
         &-main
             &__title
@@ -21,9 +101,10 @@
                 padding: 85px 25px
 
     .main
-        padding-top: 154px
+        padding-top: 150px
         padding-bottom: 250px
         background: url(../img/main/bgC.webp) no-repeat center bottom
+        margin-bottom: -250px
         &__play
             margin-right: 80px
             &__arrow
@@ -54,9 +135,25 @@
             display: flex
 
 @media screen and ( max-width: 767px )
+    .advantages
+        overflow: hidden
+        &__container
+            max-width: 358px
+        &__row
+            gap: 30px 0
+            justify-content: space-between
+            display: grid
+            grid-template-columns: 164px 164px
+        &__card
+            &:nth-child(2n)
+                transform: translateY(26px)
+            &:nth-child(2n + 1)
+                transform: none
+
     .main
         background: url(../img/main/bgM.webp) no-repeat center bottom
         padding-bottom: 240px
+        margin-bottom: -160px
         &__text
             margin-left: auto
             margin-right: auto

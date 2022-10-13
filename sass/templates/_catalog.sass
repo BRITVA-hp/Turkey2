@@ -1,0 +1,51 @@
+.catalog
+    background: url(../img/catalog/bg.jpg) no-repeat center/cover
+    padding-top: 100px
+    padding-bottom: 100px
+    &__link
+        font-weight: 700
+        font-size: 18px
+        line-height: 130%
+        background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        span
+            margin-right: 13px
+    &__title
+        color: #fff
+        margin-bottom: 55px
+    &__buttons
+        display: flex
+        justify-content: center
+        gap: 45px
+        flex-wrap: wrap
+        margin-bottom: 30px
+        &__elem
+            font-weight: normal
+            font-size: 18px
+            line-height: 130%
+            background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
+            cursor: pointer
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 2px
+                background: linear-gradient(to right, #AA8A5D, #EFC484, #C9A36F, #AB8B5D)
+                display: none
+            &--active
+                font-weight: 800
+                &::after
+                    display: block
