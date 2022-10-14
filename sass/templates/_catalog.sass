@@ -2,6 +2,107 @@
     background: url(../img/catalog/bg.jpg) no-repeat center/cover
     padding-top: 100px
     padding-bottom: 100px
+    &__wrap
+        width: 100%
+        background: #554C58
+        border-radius: 50px
+        height: 254px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 30px
+        margin-top: -188px
+        position: relative
+        z-index: 1
+        &__arrow
+            position: absolute
+            width: 61px
+            height: 100%
+            cursor: pointer
+            top: 0
+            left: 0
+            border-radius: 50px 0 0 50px
+            &--next
+                left: auto
+                right: 0
+                border-radius: 0 50px 50px 0
+            
+    &__window
+        overflow: hidden
+        margin: 0 61px
+        position: relative
+        z-index: 2
+    &__field
+        display: flex
+        align-items: stretch
+        gap: 26px
+        transition: 0.3s
+    &__card
+        min-width: 240px
+        width: 240px
+        min-height: 426px
+        background: linear-gradient(to bottom, transparent 66px, #fff 66px)
+        border-radius: 30px
+        padding: 25px 20px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            z-index: 1
+            top: 20px
+            left: 0
+            background: #fff
+            border-radius: 30px
+            width: 100%
+            height: 100px
+            transform: skewY(10deg)
+        &__top, &__bottom
+            position: relative
+            z-index: 2
+        &__details
+            font-weight: 500
+            font-size: 15px
+            line-height: 130%
+            color: rgba(64, 64, 64, 0.8)
+            cursor: pointer
+        &__price
+            font-weight: 800
+            font-size: 25px
+            line-height: 120%
+            background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
+            margin-bottom: 20px
+        &__description
+            font-weight: normal
+            font-size: 12px
+            line-height: 120%
+            color: rgba(64, 64, 64, 0.7)
+        &__title
+            font-weight: bold
+            font-size: 16px
+            line-height: 120%
+            color: #404040
+            margin-bottom: 14px
+        &__img
+            width: 100%
+            height: 150px
+            margin: auto
+            display: flex
+            align-items: stretch
+            justify-content: center
+            overflow: hidden
+            margin-bottom: 16px
+            clip-path: path('M 0,25 Q 0,0 25,0 L 179,27 Q 200,31 200,52 L 200,125 Q 200,150 175,150 L 25,150 Q 0,150 0,125 L 0,25 Z')
+            img
+                max-width: none
+                min-width: 100%
+                min-height: 100%
     &__link
         font-weight: 700
         font-size: 18px
@@ -14,15 +115,17 @@
         display: flex
         align-items: center
         justify-content: flex-end
+        margin-bottom: 40px
         span
             margin-right: 13px
     &__title
         color: #fff
         margin-bottom: 55px
+        max-width: 444px
     &__buttons
         display: flex
         justify-content: center
-        gap: 45px
+        gap: 20px 45px
         flex-wrap: wrap
         margin-bottom: 30px
         &__elem

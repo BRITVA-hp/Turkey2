@@ -1,4 +1,9 @@
 @media screen and ( max-width: 1200px )
+
+    .catalog
+        &__container
+            max-width: 894px
+
     .we
         &__img
             margin-bottom: 65px
@@ -37,6 +42,46 @@
         &__title
             font-size: 20px
     // settings
+
+    .send
+        padding-top: 60px
+        padding-bottom: 60px
+        &__button
+            max-width: 325px
+            font-size: 16px
+        &__box
+            margin-bottom: 50px
+        &__title
+            margin-bottom: 60px
+        &__container
+            padding: 60px 30px 70px
+            border-radius: 40px
+            max-width: 750px
+
+    .catalog
+        padding-top: 60px
+        padding-bottom: 60px
+        padding-left: 0
+        padding-right: 0
+        &__overhead, &__title, &__buttons, &__link
+            padding: 0 20px
+        &__wrap
+            margin-top: -207px
+            padding: 20px
+            &__arrow
+                width: 50px
+        &__container
+            max-width: 606px
+        &__window
+            margin: 0 50px
+        &__title
+            margin-bottom: 46px
+            max-width: 380px
+        &__link
+            font-size: 16px
+        &__buttons
+            &__elem
+                font-size: 16px
 
     .we
         &__img
@@ -135,6 +180,16 @@
             display: flex
 
 @media screen and ( max-width: 767px )
+    .send
+        &__button
+            max-width: none
+            width: 100%
+        &__container
+            max-width: 500px
+        &__box
+            flex-direction: column
+            align-items: center
+
     .advantages
         overflow: hidden
         &__container
@@ -167,6 +222,22 @@
             margin: 0
         &__row
             flex-direction: column
+
+@media screen and ( max-width: 650px )
+    .catalog
+        &__wrap
+            max-width: 340px
+            margin-left: auto
+            margin-right: auto
+        &__window
+            max-width: 240px
+            margin-left: auto
+            margin-right: auto
+
+@media screen and ( max-width: 400px )
+    .send
+        &__container
+            padding: 60px 20px 70px
 
 @media screen and ( max-height: 750px )
     .menu
