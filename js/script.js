@@ -86,25 +86,31 @@ document.addEventListener('DOMContentLoaded', () => {
             dots_ = [];
 
         // считаем расстояние между карточками
-        const betweenCards = (field_.scrollWidth - (cards_[0].clientWidth * cards_.length)) / (cards_.length -1)
+            // общая длина всех карточек + расстояния между ними
+        const lengthCardAndBetweenCards = cards_[cards_.length - 1].getBoundingClientRect().right - window_.getBoundingClientRect().left;
+            // расстояние между карточками
+        const betweenCards = (lengthCardAndBetweenCards - (cards_[0].clientWidth * cards_.length)) / (cards_.length -1);
+
         // считаем количество карточек, помещающихся в окне
         function numberIntegerVisibleCards() {
             return Math.floor((window_.clientWidth + betweenCards) / (cards_[0].clientWidth + betweenCards))
         }
         // проверяем, показывается ли последняя карточка
         function lastCard() {
-            if ( (sliderCounter + numberIntegerVisibleCards()) >= (cards_.length) ) {
+            if ( (sliderCounter + numberIntegerVisibleCards()) >= (cards_.length) && cards_.length >= numberIntegerVisibleCards()) {
                 sliderCounter = cards_.length - numberIntegerVisibleCards() - 1
                 return true
             }
             return false
         }
-        // Устанавливаем фиксированную ширину поля слайдов
 
-        // field_.style.width = `${cardWidth * cards_.length + (margin * (cards_.length - 1))}px`;
-        // field_.style.marginLeft = 'auto';
-        // field_.style.marginRight = 'auto';
-        // field_.style.display = 'flex';
+        // проверяем, больше ли у нас карточек, чем может поместиться в видимой части слайдера
+        function checkNumCards() {
+            if (cards_.length > numberIntegerVisibleCards()) {
+                return true
+            }
+            return false
+        }
 
         //Устанавливаем ширину бегунка прогресс-бара
         if (progress_) {
@@ -114,6 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Слайд следующий
 
         function slideNext() {
+            if (!checkNumCards()) {
+                return
+            }
             sliderCounter++;
             arrowNext_.classList.remove(arrowClass);
             arrowPrev_.classList.remove(arrowClass);
@@ -147,6 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Слайд предыдущий
 
         function slidePrev() {
+            if (!checkNumCards()) {
+                return
+            }
             sliderCounter--;
             arrowNext_.classList.remove(arrowClass);
             arrowPrev_.classList.remove(arrowClass);
@@ -173,7 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 sliderCounter = cards_.length - numberIntegerVisibleCards() - 1
                 return
             }
-
             field_.style.transform = `translateX(-${(cards_[0].scrollWidth + betweenCards) * sliderCounter}px)`;
         }
 
@@ -232,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window_.addEventListener('touchend', (e) => {
             endPoint = e.changedTouches[0].pageX;
-            if (Math.abs(startPoint - endPoint) > 50) {
+            if (Math.abs(startPoint - endPoint) > 50 && checkNumCards()) {
                 arrowNext_.classList.remove(arrowClass);
                 arrowPrev_.classList.remove(arrowClass);
                 if (endPoint < startPoint) {
