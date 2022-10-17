@@ -29,7 +29,7 @@
 @font-face {
   font-family: "Muller";
   src: url("../fonts/muller/MullerLight.woff") format("woff"), url("../fonts/muller/MullerLight.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -1247,6 +1247,139 @@ body {
   align-items: center;
   width: 100%;
   padding: 10px;
+}
+.modal-det__charact__item {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+.modal-det__charact__item:last-child {
+  margin-bottom: 0;
+}
+.modal-det__charact__item__text {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 120%;
+  color: #404040;
+}
+.modal-det__charact__item__header {
+  display: flex;
+  align-items: flex-start;
+  width: 165px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 120%;
+  color: #404040;
+}
+.modal-det__charact__item__header img {
+  margin-right: 30px;
+  min-width: 20px;
+  width: 20px;
+}
+.modal-det__charact__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #404040;
+  margin-bottom: 35px;
+}
+.modal-det__row {
+  display: flex;
+  gap: 50px;
+}
+.modal-det__slider__progress {
+  width: 100%;
+  max-width: 414px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: auto;
+  position: relative;
+}
+.modal-det__slider__progress__inner {
+  width: 30%;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  bottom: -2px;
+  background: linear-gradient(to right, #AA8A5D, #EFC484, #C9A36F, #AB8B5D);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.modal-det__slider__card {
+  cursor: pointer;
+  position: relative;
+  border: 2px solid transparent;
+}
+.modal-det__slider__card--active {
+  border: 2px solid #f39006;
+}
+.modal-det__slider__card__content {
+  min-width: 122px;
+  width: 122px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.modal-det__slider__wrap {
+  position: relative;
+  margin-bottom: 35px;
+}
+.modal-det__slider__window {
+  margin: auto;
+  width: 100%;
+  max-width: 426px;
+  overflow: hidden;
+}
+.modal-det__slider__row {
+  display: flex;
+  gap: 24px;
+  transition: 0.3s;
+}
+.modal-det__slider__arrow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.modal-det__slider__arrow--next {
+  left: auto;
+  right: 0;
+}
+.modal-det__slider__main {
+  width: 490px;
+  height: 332px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.modal-det__title {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 130%;
+  color: #404040;
+  text-align: center;
+  margin-bottom: 55px;
+}
+.modal-det__dialog {
+  width: 100%;
+  max-width: 1160px;
+  background: #fff;
+  border-radius: 80px;
+  position: relative;
+  padding: 85px 78px 70px;
+}
+.modal-det__close {
+  position: absolute;
+  top: 84px;
+  right: 72px;
+  cursor: pointer;
 }
 .modal-main__input-group {
   margin-bottom: 30px;
