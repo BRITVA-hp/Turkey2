@@ -1248,6 +1248,61 @@ body {
   width: 100%;
   padding: 10px;
 }
+.modal-video__container {
+  position: relative;
+  padding: 0;
+}
+.modal-video__dialog {
+  position: relative;
+  z-index: 1;
+}
+.modal-video__video {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100vh;
+}
+.modal-video__close {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.modal-det__ul {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #5F6264;
+  padding-left: 20px;
+}
+.modal-det__li {
+  margin-bottom: 10px;
+}
+.modal-det__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+.modal-det__description__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: #5F6264;
+  margin-bottom: 10px;
+}
+.modal-det__description__box {
+  max-width: 450px;
+}
+.modal-det__button {
+  -webkit-clip-path: url(#svgPathModalDet);
+  clip-path: url(#svgPathModalDet);
+  width: 100%;
+  max-width: 260px;
+  margin: auto;
+  display: block;
+}
 .modal-det__charact__item {
   display: flex;
   gap: 40px;
@@ -1287,6 +1342,7 @@ body {
 .modal-det__row {
   display: flex;
   gap: 50px;
+  margin-bottom: 65px;
 }
 .modal-det__slider__progress {
   width: 100%;
@@ -1309,20 +1365,31 @@ body {
 .modal-det__slider__card {
   cursor: pointer;
   position: relative;
-  border: 2px solid transparent;
+  padding: 2px;
+  min-width: 126px;
+  width: 126px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.modal-det__slider__card--active {
-  border: 2px solid #f39006;
+.modal-det__slider__card--active::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(to right bottom, #AA8A5D, #EFC484, #C9A36F, #AB8B5D);
+  width: 100%;
+  height: 100%;
 }
 .modal-det__slider__card__content {
-  min-width: 122px;
-  width: 122px;
-  height: 82px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 .modal-det__slider__wrap {
   position: relative;
@@ -1523,6 +1590,78 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  .modal-det__li {
+    margin-bottom: 5px;
+  }
+  .modal-det__ul {
+    font-size: 14px;
+  }
+  .modal-det__description {
+    margin-bottom: 45px;
+  }
+  .modal-det__description__box {
+    max-width: 380px;
+  }
+  .modal-det__description__title {
+    font-size: 16px;
+  }
+  .modal-det__row {
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .modal-det__charact__item {
+    gap: 30px;
+  }
+  .modal-det__charact__item__text {
+    font-size: 15px;
+  }
+  .modal-det__charact__item__header {
+    font-size: 14px;
+    width: 145px;
+    min-width: 145px;
+  }
+  .modal-det__charact__item__header img {
+    margin-right: 20px;
+  }
+  .modal-det__dialog {
+    border-radius: 40px;
+    padding: 75px 38px;
+    max-width: 870px;
+  }
+  .modal-det__close {
+    width: 20px;
+    top: 36px;
+    right: 33px;
+  }
+  .modal-det__title {
+    margin-bottom: 42px;
+  }
+  .modal-det__slider__wrap {
+    margin-bottom: 20px;
+  }
+  .modal-det__slider__progress {
+    max-width: 250px;
+  }
+  .modal-det__slider__arrow {
+    width: 6px;
+  }
+  .modal-det__slider__window {
+    max-width: 250px;
+  }
+  .modal-det__slider__row {
+    gap: 14px;
+  }
+  .modal-det__slider__card {
+    width: 74px;
+    min-width: 74px;
+    height: 52px;
+  }
+  .modal-det__slider__main {
+    width: 285px;
+    height: 194px;
+    margin-bottom: 14px;
+  }
   .catalog__container {
     max-width: 894px;
   }
@@ -1744,6 +1883,28 @@ body {
   }
   .advantages__card:nth-child(10) {
     transform: translateY(52px);
+  }
+  .modal-det__button {
+    max-width: none;
+  }
+  .modal-det__description {
+    flex-direction: column;
+  }
+  .modal-det__description__box:first-child {
+    margin-bottom: 40px;
+  }
+  .modal-det__dialog {
+    max-width: 400px;
+  }
+  .modal-det__slider {
+    margin-bottom: 50px;
+  }
+  .modal-det__row {
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    margin: auto;
+    margin-bottom: 50px;
   }
   .modal-main__title {
     font-size: 25px;

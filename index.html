@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/style.css">
 
     <title>Document</title>
@@ -33,11 +40,11 @@
                 </picture>
 
                 <nav class="header__nav">
-                    <a href="#" class="header__link">О нас</a>
-                    <a href="#" class="header__link">Аренда</a>
-                    <a href="#" class="header__link">Продажа</a>
-                    <a href="#" class="header__link">Новости</a>
-                    <a href="#" class="header__link">Контакты</a>
+                    <a href="#we" class="header__link">О нас</a>
+                    <a href="#catalog" class="header__link">Аренда</a>
+                    <a href="#catalog" class="header__link">Продажа</a>
+                    <a href="#send" class="header__link">Новости</a>
+                    <a href="#footer" class="header__link">Контакты</a>
                 </nav>
 
                 <button class="button header__button"><img src="img/tel.png" alt="tel">Бесплатный звонок</button>
@@ -102,7 +109,7 @@
                         </button>
                     </div>
 
-                    <div class="main__play">
+                    <div data-video="video/Turkey.mp4" class="main__play">
                         <picture class="main__play__button">
                             <source media="(max-width: 991px)" srcset="img/main/playM.png">
                             <img src="img/main/play.png" alt="play">
@@ -205,7 +212,7 @@
         </section>
         <!-- /.section advantages -->
 
-        <section class="section we">
+        <section id="we" class="section we">
 
             <div class="container we__container">
                 <p class="section__overhead we__overhead">О компании</p>
@@ -233,7 +240,7 @@
         </section>
         <!-- /.section we -->
 
-        <section class="section catalog">
+        <section id="catalog" class="section catalog">
             <div class="catalog__container container">
                 <p class="section__overhead catalog__overhead">Каталог недвижимости</p>
                 <h3 class="section__title catalog__title">Мы предлагаем обширный выбор квартир в аренду и на продажу</h3>
@@ -263,7 +270,7 @@
     
                             <div class="catalog__card__bottom">
                                 <p class="catalog__card__price">2 000 000 ₺</p>
-                                <div class="catalog__card__details">
+                                <div data-modalDet class="catalog__card__details">
                                     <span>Подробнее</span>
                                     <img src="img/catalog/arrowDetail.png" alt="details">
                                 </div>
@@ -283,7 +290,7 @@
     
                             <div class="catalog__card__bottom">
                                 <p class="catalog__card__price">2 000 000 ₺</p>
-                                <div class="catalog__card__details">
+                                <div data-modalDet class="catalog__card__details">
                                     <span>Подробнее</span>
                                     <img src="img/catalog/arrowDetail.png" alt="details">
                                 </div>
@@ -303,7 +310,7 @@
     
                             <div class="catalog__card__bottom">
                                 <p class="catalog__card__price">2 000 000 ₺</p>
-                                <div class="catalog__card__details">
+                                <div data-modalDet class="catalog__card__details">
                                     <span>Подробнее</span>
                                     <img src="img/catalog/arrowDetail.png" alt="details">
                                 </div>
@@ -323,7 +330,7 @@
     
                             <div class="catalog__card__bottom">
                                 <p class="catalog__card__price">2 000 000 ₺</p>
-                                <div class="catalog__card__details">
+                                <div data-modalDet class="catalog__card__details">
                                     <span>Подробнее</span>
                                     <img src="img/catalog/arrowDetail.png" alt="details">
                                 </div>
@@ -343,7 +350,7 @@
     
                             <div class="catalog__card__bottom">
                                 <p class="catalog__card__price">2 000 000 ₺</p>
-                                <div class="catalog__card__details">
+                                <div data-modalDet class="catalog__card__details">
                                     <span>Подробнее</span>
                                     <img src="img/catalog/arrowDetail.png" alt="details">
                                 </div>
@@ -363,7 +370,7 @@
     
                             <div class="catalog__card__bottom">
                                 <p class="catalog__card__price">2 000 000 ₺</p>
-                                <div class="catalog__card__details">
+                                <div data-modalDet class="catalog__card__details">
                                     <span>Подробнее</span>
                                     <img src="img/catalog/arrowDetail.png" alt="details">
                                 </div>
@@ -389,7 +396,7 @@
         </section>
         <!-- /.section catalog -->
 
-        <section class="section send">
+        <section id="send" class="section send">
 
             <form action="#" class="container send__container">
                 <p class="section__overhead send__overhead">Обратиться к нам</p>
@@ -551,17 +558,17 @@
 
     </main>
 
-    <footer class="footer section">
+    <footer id="footer" class="footer section">
 
         <div class="container footer__container">
             <div class="row footer__row">
                 <img src="img/logo.png" alt="Feniks" class="footer__logo">
 
                 <nav class="footer__nav">
-                    <a href="#" class="footer__link">О нас</a>
-                    <a href="#" class="footer__link">Аренда</a>
-                    <a href="#" class="footer__link">Продажа</a>
-                    <a href="#" class="footer__link">Новости</a>
+                    <a href="#we" class="footer__link">О нас</a>
+                    <a href="#catalog" class="footer__link">Аренда</a>
+                    <a href="#catalog" class="footer__link">Продажа</a>
+                    <a href="#send" class="footer__link">Новости</a>
                 </nav>
     
                 <a href="tel:0 (534) 085 27 30" class="footer__tel">
@@ -586,11 +593,11 @@
             <div class="menu__box">
                 <img class="menu__logo" src="img/logo.png" alt="logo">
                 <nav class="menu__nav">
-                    <a data-menuClose href="#" class="menu__link">О нас</a>
-                    <a data-menuClose href="#" class="menu__link">Аренда</a>
-                    <a data-menuClose href="#" class="menu__link">Продажа</a>
-                    <a data-menuClose href="#" class="menu__link">Новости</a>
-                    <a data-menuClose href="#" class="menu__link">Контакты</a>
+                    <a data-menuClose href="#we" class="menu__link">О нас</a>
+                    <a data-menuClose href="#catalog" class="menu__link">Аренда</a>
+                    <a data-menuClose href="#catalog" class="menu__link">Продажа</a>
+                    <a data-menuClose href="#send" class="menu__link">Новости</a>
+                    <a data-menuClose href="#footer" class="menu__link">Контакты</a>
                 </nav>
             </div>
 
@@ -717,7 +724,7 @@
         </div>
     </div>
 
-    <div class="modal modal--active modal-det">
+    <div class="modal modal-det">
         <div class="modal__container">
 
             <div class="modal-det__dialog">
@@ -891,11 +898,88 @@
                     </div>
 
                 </div>
+
+                <div class="modal-det__description">
+                    <div class="modal-det__description__box">
+                        <p class="modal-det__description__title">Особенности:</p>
+                        <ul class="modal-det__ul">
+                            <li class="modal-det__li">4+1 180 м2 дуплекс (два отдельных входа)</li>
+                            <li class="modal-det__li">верхний этаж сдается в аренду</li>
+                            <li class="modal-det__li">отдельная кухня</li>
+                            <li class="modal-det__li">удобные комнаты</li>
+                            <li class="modal-det__li">нижняя подсекция: зал, спальня, детская комната, кухня, ванная + алатурка туалет, балкон</li>
+                            <li class="modal-det__li">верхняя подсекция: зал, спальня, американская кухня, ванная, балкон</li>
+                            <li class="modal-det__li">стороны: юг / восход / запад</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-det__description__box">
+                        <p class="modal-det__description__title">Местоположение</p>
+                        <ul class="modal-det__ul">
+                            <li class="modal-det__li">район кепез эмек</li>
+                            <li class="modal-det__li">​недалеко от трамвайной линии и обводной дороги</li>
+                            <li class="modal-det__li">автобусная остановка - 2 мин</li>
+                            <li class="modal-det__li">районный рынок - 2 мин</li>
+                            <li class="modal-det__li">сетевые супермаркеты и пекарня в шаговой доступности</li>
+                            <li class="modal-det__li">государственная школа</li>
+                            <li class="modal-det__li">клиника здоровья (семейный врач)</li>
+                            <li class="modal-det__li">муниципалитет кепеза</li>
+                            <li class="modal-det__li">египетский базар</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="button-r modal-det__button">
+                    <span>Подробнее</span>
+                    <div class="button-r__wrap">
+                        <svg>
+                            <clipPath id="svgPathModalDet">
+                                <path d="M 15,0
+                                    Q 5,0 5,10
+                                    Q 0,38 5,66
+                                    Q 5,76 15,76"
+                                />
+                                <path class="path" d="M 15,0
+                                    Q 5,0 5,10
+                                    Q 0,38 5,66
+                                    Q 5,76 15,76"
+                                />
+                                <rect x="15" width="calc(100% - 30px)" height="100%" />
+                            </clipPath>
+                        </svg>
+
+                        <svg>
+                            <clipPath id="svgPathModalDetM">
+                                <path d="M 15,0
+                                    Q 5,0 5,10
+                                    Q 0,33 5,56
+                                    Q 5,66 15,66"
+                                />
+                                <path class="path" d="M 15,0
+                                    Q 5,0 5,10
+                                    Q 0,33 5,56
+                                    Q 5,66 15,66"
+                                />
+                            <rect x="15" width="calc(100% - 30px)" height="100%"/>
+                            </clipPath>
+                        </svg>
+                    </div>
+                </button>
+
             </div>
 
         </div>
     </div>
     <!-- /.modal modal--active modal-det -->
+
+    <div class="modal modal-video">
+        <div class="modal__container modal-video__container">
+            <img src="img/modal/closeWhite.png" alt="close" class="modal-video__close">
+            <div class="modal-video__dialog">
+                <video class="modal-video__video" id="video" controls="controls" src="#"></video>
+            </div>
+        </div>
+    </div>
         
     <script src="js/script.js"></script>
 </body>

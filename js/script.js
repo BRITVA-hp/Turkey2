@@ -90,6 +90,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     modal('.modal-main', 'modal--active', '[data-modal]', '.modal-main__close');
+    modal('.modal-det', 'modal--active', '[data-modalDet]', '.modal-det__close');
+
+    //video
+    function video(triggers, _video, _modalVideo, _modalVideoClose) {
+        const play = document.querySelectorAll(triggers),
+            video = document.querySelector(_video),
+            modalVideo = document.querySelector(_modalVideo),
+            modalVideoClose = document.querySelector(_modalVideoClose);
+
+        play.forEach(item => {
+            item.addEventListener('click', (e) => {
+                const path = e.currentTarget.getAttribute('data-video');
+                modalVideo.classList.add('modal--active');
+                document.body.style.overflow = 'hidden';
+                video.setAttribute('src', path);
+                video.play();
+            });
+        });
+
+        modalVideo.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal__container')) {
+                modalVideo.classList.remove('modal--active');
+                video.pause();
+                document.body.style.overflow = '';
+            }
+        });
+        modalVideoClose.addEventListener('click', () => {
+            modalVideo.classList.remove('modal--active');
+            video.pause();
+            document.body.style.overflow = '';
+        })
+    }
+
+    video('.main__play', '#video', '.modal-video', '.modal-video__close');
 
     //slider
     function slider(window, field, cards, dotsWrap, dotClass, dotClassActive, arrowPrev, arrowNext, arrowClass, progress, activeCard = false) {
@@ -143,7 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 setActiveCard(counterActiveCard)
-    
+                if (counterActiveCard < sliderCounter) {
+                    slidePrev()
+                }
             })
 
             next.addEventListener('click', (e) => {
@@ -155,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 setActiveCard(counterActiveCard)
                 if (counterActiveCard >= sliderCounter + numberIntegerVisibleCards()) {
-                    field_.style.transform = `translateX(-${cards_[0].scrollWidth + betweenCards}px)`
+                    slideNext()
                 }
             })
 
@@ -371,13 +407,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     slidePrev();
                 }
-            } else {
+            } else if(Math.abs(startPoint - endPoint) === 0) {
+                return
+            } 
+            else {
                 field_.style.transform = `translateX(-${(cards_[0].scrollWidth + betweenCards) * sliderCounter}px)`;
             }
         })
         window_.addEventListener('mouseleave', () => {
+            if (mouseMoveFlag) {
+                field_.style.transform = `translateX(-${(cards_[0].scrollWidth + betweenCards) * sliderCounter}px)`;   
+            }
             mouseMoveFlag = false
-            field_.style.transform = `translateX(-${(cards_[0].scrollWidth + betweenCards) * sliderCounter}px)`;
         })
     }
 

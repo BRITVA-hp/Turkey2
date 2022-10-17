@@ -24,7 +24,52 @@
         align-items: center
         width: 100%
         padding: 10px
+    &-video
+        &__container
+            position: relative
+            padding: 0
+        &__dialog
+            position: relative
+            z-index: 1
+        &__video
+            display: block
+            margin: auto
+            max-width: 100%
+            height: auto
+            max-height: 100vh
+        &__close
+            position: absolute
+            z-index: 2
+            top: 20px
+            right: 20px
+            cursor: pointer
     &-det
+        &__ul
+            font-weight: 500
+            font-size: 16px
+            line-height: 120%
+            color: #5F6264
+            padding-left: 20px
+        &__li
+            margin-bottom: 10px
+        &__description
+            display: flex
+            justify-content: space-between
+            margin-bottom: 65px
+            &__title
+                font-weight: 500
+                font-size: 18px
+                line-height: 140%
+                color: #5F6264
+                margin-bottom: 10px
+            &__box
+                max-width: 450px
+        &__button
+            clip-path: url(#svgPathModalDet)
+            width: 100%
+            max-width: 260px
+            margin: auto
+            display: block
         &__charact
             &__item
                 display: flex
@@ -59,6 +104,7 @@
         &__row
             display: flex
             gap: 50px
+            margin-bottom: 65px
         &__slider
             &__progress
                 width: 100%
@@ -79,18 +125,30 @@
             &__card
                 cursor: pointer
                 position: relative
-                border: 2px solid transparent
+                padding: 2px
+                min-width: 126px
+                width: 126px
+                height: 86px
+                display: flex
+                align-items: center
+                justify-content: center
                 &--active
-                    border: 2px solid #f39006
+                    &::before
+                        content: ''
+                        position: absolute
+                        z-index: 1
+                        background: linear-gradient(to right bottom, #AA8A5D, #EFC484, #C9A36F, #AB8B5D)
+                        width: 100%
+                        height: 100%
                 &__content
-                    min-width: 122px
-                    width: 122px
-                    height: 82px
+                    width: calc( 100% - 4px )
+                    height: calc( 100% - 4px )
                     display: flex
                     align-items: center
                     justify-content: center
                     overflow: hidden
                     position: relative
+                    z-index: 2
             &__wrap
                 position: relative
                 margin-bottom: 35px
