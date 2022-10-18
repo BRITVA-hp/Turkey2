@@ -1,4 +1,61 @@
 @media screen and ( max-width: 1200px )
+    .directory
+        &__pagination
+            margin-bottom: 60px
+        &__row
+            max-width: 800px
+        &__card
+            gap: 15px
+            padding: 20px
+            border-radius: 15px
+            &__button
+                img
+                    width: 24px
+            &__description
+                font-size: 12px
+                margin-bottom: 15px
+            &__price
+                font-size: 18px
+            &__title
+                font-size: 14px
+                margin-bottom: 10px
+            &__img
+                min-width: 156px
+                width: 156px
+                height: 190px
+                border-radius: 14px
+        &__filter
+            max-width: 628px
+            margin: auto
+            margin-bottom: 40px
+            &__button
+                margin: auto
+                margin-top: 30px
+            &__block
+                width: 100%
+                margin-bottom: 30px
+            &__rooms
+                width: 50%
+                flex-direction: column
+                padding-left: 20px 
+                &__title
+                    margin-bottom: 15px
+                    margin-right: 0
+            &__input-group
+                &--date
+                    width: 50%
+            &__input
+                &--date
+                    padding: 15px 15px 15px 45px
+                &--center
+                    border-right: 1px solid rgba(0, 0, 0, 0.4)
+            &__row
+                flex-wrap: wrap
+                margin: auto
+                align-items: flex-start
+                &--top
+                    flex-direction: column
+
     .modal
         &-det
             &__li
@@ -98,6 +155,19 @@
         &__title
             font-size: 20px
     // settings
+
+    .directory
+        padding-top: 145px
+        &__filter
+            padding: 40px
+            &__rooms
+                &__title
+                    img
+                        margin-right: 15px
+            &__tabs
+                margin-bottom: 40px
+                &__item
+                    font-size: 16px
 
     .footer
         background: url(../img/footer/bgC.png) no-repeat center top
@@ -287,6 +357,14 @@
             display: flex
 
 @media screen and ( max-width: 767px )
+    .directory
+        background: url(../img/directory/bgM.webp) no-repeat center top
+        &__card
+            width: 100%
+        &__row
+            flex-direction: column
+            align-items: center
+
     .faq
         padding: 0
         &__title
@@ -354,6 +432,26 @@
             margin-right: auto
 
 @media screen and ( max-width: 575px )
+    .directory
+        &__filter
+            &__button
+                margin-top: 50px
+            &__rooms
+                width: 100%
+                padding: 0
+            &__input-group
+                &--date
+                    width: 100%
+                    margin-bottom: 30px
+            &__input
+                &--left
+                    border-right: 1px solid rgba(0, 0, 0, 0.4)
+                    border-bottom: none
+                &--center
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.4)
+            &__wrap
+                flex-direction: column
+
     .footer
         background: url(../img/footer/bgM.png) no-repeat center top
         &__socials
@@ -367,6 +465,12 @@
             text-align: center
 
 @media screen and ( max-width: 400px )
+    .directory
+        &__card
+            flex-direction: column
+            &__img
+                height: 100px
+
     .send
         &__container
             padding: 60px 20px 70px

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <svg style="visibility: hidden; position: fixed;" width="0" height="0">
+        <defs>
+            <linearGradient id="cl1" gradientUnits="objectBoundingBox" x1="0" y1="0.5" x2="1" y2="0.5">
+                <stop stop-color="#AA8A5D"/>
+                <stop offset="20%" stop-color="#EFC484"/>
+                <stop offset="80%" stop-color="#C9A36F"/>
+                <stop offset="100%" stop-color="#AA8A5D"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <header class="header section">
+
+        <div class="container header__container">
+            <div class="row-center">
+
+                <picture class="header__logo">
+                    <source media="(max-width: 991px)" srcset="img/logoM.png">
+                    <img src="img/logo.png" alt="Feniks">
+                </picture>
+
+                <nav class="header__nav">
+                    <a href="#we" class="header__link">О нас</a>
+                    <a href="#catalog" class="header__link">Аренда</a>
+                    <a href="#catalog" class="header__link">Продажа</a>
+                    <a href="#send" class="header__link">Новости</a>
+                    <a href="#footer" class="header__link">Контакты</a>
+                </nav>
+
+                <button class="button header__button"><img src="img/tel.png" alt="tel">Бесплатный звонок</button>
+
+                <div class="header__burger">
+                    <div class="header__burger__line"></div>
+                    <div class="header__burger__line"></div>
+                    <div class="header__burger__line"></div>
+                    <div class="header__burger__line"></div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- /.header section -->
+
+    <main>
+
+        <section class="section directory">
+            <div class="container directory__container">
+                <form action="#" class="directory__filter">
+                    <div class="directory__filter__tabs">
+                        <p class="directory__filter__tabs__item directory__filter__tabs__item--active">Купить квартиру</p>
+                        <p class="directory__filter__tabs__item">Снять квартиру</p>
+                    </div>
+
+                    <div class="directory__filter__box">
+                        <div class="directory__filter__row directory__filter__row--top">
+
+                            <div class="directory__filter__block">
+                                <div class="directory__filter__block__title">
+                                    <img src="img/directory/icon1.png" alt="price">
+                                    <span>Цена продажи, ₺</span>
+                                </div>
+                                <div class="directory__filter__wrap">
+                                    <div class="input-group directory__filter__input-group">
+                                        <input placeholder="От" type="text" class="directory__filter__input directory__filter__input--left">
+                                    </div>
+                                    <div class="input-group directory__filter__input-group">
+                                        <input placeholder="До" type="text" class="directory__filter__input directory__filter__input--left directory__filter__input--center">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="directory__filter__block">
+                                <div class="directory__filter__block__title">
+                                    <img src="img/directory/icon2.png" alt="price">
+                                    <span>Цена за м2, ₺</span>
+                                </div>
+                                <div class="directory__filter__wrap">
+                                    <div class="input-group directory__filter__input-group">
+                                        <input placeholder="От" type="text" class="directory__filter__input directory__filter__input--left">
+                                    </div>
+                                    <div class="input-group directory__filter__input-group">
+                                        <input placeholder="До" type="text" class="directory__filter__input">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="directory__filter__row">
+                            <div for="date" class="input-group directory__filter__input-group directory__filter__input-group--date">
+                                <input type="date" id="date" class="directory__filter__input directory__filter__input--date">
+                            </div>
+
+                            <div class="directory__filter__rooms">
+                                <div class="directory__filter__rooms__title">
+                                    <img src="img/directory/icon4.png" alt="rooms">
+                                    <span>Количество комнат:</span>
+                                </div>
+                                <div class="directory__filter__rooms__row">
+
+                                    <label class="directory__filter__rooms__radio">
+                                        <input checked type="radio" name="rooms" class="directory__filter__rooms__radio__input">
+                                        <div class="directory__filter__rooms__radio__ok"></div>
+                                        <span class="directory__filter__rooms__radio__text">1</span>
+                                    </label>
+
+                                    <label class="directory__filter__rooms__radio">
+                                        <input type="radio" name="rooms" class="directory__filter__rooms__radio__input">
+                                        <div class="directory__filter__rooms__radio__ok"></div>
+                                        <span class="directory__filter__rooms__radio__text">2</span>
+                                    </label>
+
+                                    <label class="directory__filter__rooms__radio">
+                                        <input type="radio" name="rooms" class="directory__filter__rooms__radio__input">
+                                        <div class="directory__filter__rooms__radio__ok"></div>
+                                        <span class="directory__filter__rooms__radio__text">3</span>
+                                    </label>
+
+                                    <label class="directory__filter__rooms__radio">
+                                        <input type="radio" name="rooms" class="directory__filter__rooms__radio__input">
+                                        <div class="directory__filter__rooms__radio__ok"></div>
+                                        <span class="directory__filter__rooms__radio__text">4+</span>
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <button class="directory__filter__button">Найти</button>
+
+                        </div>
+                    </div>
+                </form>
+
+
+                <div class="directory__row">
+
+                    <div class="directory__card directory__card--active">
+                        <div class="directory__card__img">
+                            <img src="img/directory/img.jpg" alt="flat">
+                        </div>
+
+                        <div class="directory__card__box">
+                            <div class="directory__card__wrap">
+                                <p class="directory__card__title">Квартира 145 м2</p>
+
+                                <p class="directory__card__description">Полностью мебелированная квартира планировки 3+1, 145 м2. 5 кондиционеров, 2 застекленных балкона и утроенная кухня.</p>
+
+                                <p class="directory__card__price">2 000 000 ₺</p>
+                            </div>
+
+                            <div data-modalDet class="directory__card__button">
+                                <span>Подробнее</span>
+                                <img src="img/directory/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="directory__card">
+                        <div class="directory__card__img">
+                            <img src="img/directory/img.jpg" alt="flat">
+                        </div>
+
+                        <div class="directory__card__box">
+                            <div class="directory__card__wrap">
+                                <p class="directory__card__title">Квартира 145 м2</p>
+
+                                <p class="directory__card__description">Полностью мебелированная квартира планировки 3+1, 145 м2. 5 кондиционеров, 2 застекленных балкона и утроенная кухня.</p>
+
+                                <p class="directory__card__price">2 000 000 ₺</p>
+                            </div>
+
+                            <div data-modalDet class="directory__card__button">
+                                <span>Подробнее</span>
+                                <img src="img/directory/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="directory__card">
+                        <div class="directory__card__img">
+                            <img src="img/directory/img.jpg" alt="flat">
+                        </div>
+
+                        <div class="directory__card__box">
+                            <div class="directory__card__wrap">
+                                <p class="directory__card__title">Квартира 145 м2</p>
+
+                                <p class="directory__card__description">Полностью мебелированная квартира планировки 3+1, 145 м2. 5 кондиционеров, 2 застекленных балкона и утроенная кухня.</p>
+
+                                <p class="directory__card__price">2 000 000 ₺</p>
+                            </div>
+
+                            <div data-modalDet class="directory__card__button">
+                                <span>Подробнее</span>
+                                <img src="img/directory/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="directory__card">
+                        <div class="directory__card__img">
+                            <img src="img/directory/img.jpg" alt="flat">
+                        </div>
+
+                        <div class="directory__card__box">
+                            <div class="directory__card__wrap">
+                                <p class="directory__card__title">Квартира 145 м2</p>
+
+                                <p class="directory__card__description">Полностью мебелированная квартира планировки 3+1, 145 м2. 5 кондиционеров, 2 застекленных балкона и утроенная кухня.</p>
+
+                                <p class="directory__card__price">2 000 000 ₺</p>
+                            </div>
+
+                            <div data-modalDet class="directory__card__button">
+                                <span>Подробнее</span>
+                                <img src="img/directory/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="directory__card">
+                        <div class="directory__card__img">
+                            <img src="img/directory/img.jpg" alt="flat">
+                        </div>
+
+                        <div class="directory__card__box">
+                            <div class="directory__card__wrap">
+                                <p class="directory__card__title">Квартира 145 м2</p>
+
+                                <p class="directory__card__description">Полностью мебелированная квартира планировки 3+1, 145 м2. 5 кондиционеров, 2 застекленных балкона и утроенная кухня.</p>
+
+                                <p class="directory__card__price">2 000 000 ₺</p>
+                            </div>
+
+                            <div data-modalDet class="directory__card__button">
+                                <span>Подробнее</span>
+                                <img src="img/directory/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="directory__card">
+                        <div class="directory__card__img">
+                            <img src="img/directory/img.jpg" alt="flat">
+                        </div>
+
+                        <div class="directory__card__box">
+                            <div class="directory__card__wrap">
+                                <p class="directory__card__title">Квартира 145 м2</p>
+
+                                <p class="directory__card__description">Полностью мебелированная квартира планировки 3+1, 145 м2. 5 кондиционеров, 2 застекленных балкона и утроенная кухня.</p>
+
+                                <p class="directory__card__price">2 000 000 ₺</p>
+                            </div>
+
+                            <div data-modalDet class="directory__card__button">
+                                <span>Подробнее</span>
+                                <img src="img/directory/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="directory__card">
+                        <div class="directory__card__img">
+                            <img src="img/directory/img.jpg" alt="flat">
+                        </div>
+
+                        <div class="directory__card__box">
+                            <div class="directory__card__wrap">
+                                <p class="directory__card__title">Квартира 145 м2</p>
+
+                                <p class="directory__card__description">Полностью мебелированная квартира планировки 3+1, 145 м2. 5 кондиционеров, 2 застекленных балкона и утроенная кухня.</p>
+
+                                <p class="directory__card__price">2 000 000 ₺</p>
+                            </div>
+
+                            <div data-modalDet class="directory__card__button">
+                                <span>Подробнее</span>
+                                <img src="img/directory/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="directory__card">
+                        <div class="directory__card__img">
+                            <img src="img/directory/img.jpg" alt="flat">
+                        </div>
+
+                        <div class="directory__card__box">
+                            <div class="directory__card__wrap">
+                                <p class="directory__card__title">Квартира 145 м2</p>
+
+                                <p class="directory__card__description">Полностью мебелированная квартира планировки 3+1, 145 м2. 5 кондиционеров, 2 застекленных балкона и утроенная кухня.</p>
+
+                                <p class="directory__card__price">2 000 000 ₺</p>
+                            </div>
+
+                            <div data-modalDet class="directory__card__button">
+                                <span>Подробнее</span>
+                                <img src="img/directory/arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="directory__pagination">
+                    <img class="directory__pagination__arrow directory__pagination__arrow--prev" src="img/directory/arrowPrev.png" alt="arrow">
+                    <div class="directory__pagination__item directory__pagination__item--active">
+                        <span>1</span>
+                    </div>
+                    <div class="directory__pagination__item">
+                        <span>3</span>
+                    </div>
+                    <div class="directory__pagination__item">
+                        <span>4</span>
+                    </div>
+
+                    <div class="directory__pagination__item directory__pagination__item--dots">
+                        <span>...</span>
+                    </div>
+                    <img class="directory__pagination__arrow directory__pagination__arrow--next" src="img/directory/arrowNext.png" alt="arrow">
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer section">
+
+        <div class="container footer__container">
+            <div class="row footer__row">
+                <img src="img/logo.png" alt="Feniks" class="footer__logo">
+
+                <nav class="footer__nav">
+                    <a href="#we" class="footer__link">О нас</a>
+                    <a href="#catalog" class="footer__link">Аренда</a>
+                    <a href="#catalog" class="footer__link">Продажа</a>
+                    <a href="#send" class="footer__link">Новости</a>
+                </nav>
+    
+                <a href="tel:0 (534) 085 27 30" class="footer__tel">
+                    <img src="img/tel.png" alt="tel">
+                    <span>0 (534) 085 27 30</span>
+                </a>
+            </div>
+            <div class="footer__socials">
+                <a class="footer__socials__img" href="#"><img src="img/footer/icon1.png" alt="telegram"></a>
+                <a class="footer__socials__img" href="#"><img src="img/footer/icon2.png" alt="whatsApp"></a>
+                <a class="footer__socials__img" href="#"><img src="img/footer/icon3.png" alt="instagram"></a>
+                <a class="footer__socials__img" href="#"><img src="img/footer/icon4.png" alt="facebook"></a>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- /.footer section -->
+
+    <div class="menu">
+        <div class="menu__dialog">
+            <img data-menuClose class="menu__close" src="img/close.png" alt="close">
+            <div class="menu__box">
+                <img class="menu__logo" src="img/logo.png" alt="logo">
+                <nav class="menu__nav">
+                    <a data-menuClose href="#we" class="menu__link">О нас</a>
+                    <a data-menuClose href="#catalog" class="menu__link">Аренда</a>
+                    <a data-menuClose href="#catalog" class="menu__link">Продажа</a>
+                    <a data-menuClose href="#send" class="menu__link">Новости</a>
+                    <a data-menuClose href="#footer" class="menu__link">Контакты</a>
+                </nav>
+            </div>
+
+            <div>
+                <a href="tel:0 (534) 085 27 30" class="menu__tel"><img src="img/tel.png" alt="tel">0 (534) 085 27 30</a>
+
+                <div class="menu__footer">
+                    <a href="#" class="menu__footer__link">
+                        <img src="img/menu/icon1.png" alt="telegram">
+                    </a>
+                    <a href="#" class="menu__footer__link">
+                        <img src="img/menu/icon2.png" alt="whatsapp">
+                    </a>
+                    <a href="#" class="menu__footer__link">
+                        <img src="img/menu/icon3.png" alt="instagram">
+                    </a>
+                    <a href="#" class="menu__footer__link">
+                        <img src="img/menu/icon4.png" alt="facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-det">
+        <div class="modal__container">
+
+            <div class="modal-det__dialog">
+                <picture class="modal-det__close">
+                    <source media="(max-width: 991px)" srcset="img/close.png">
+                    <img src="img/closeBlack.png" alt="close">
+                </picture>
+                <h3 class="modal-det__title">Квартира 180 м²</h3>
+
+                <div class="modal-det__row">
+                    <div class="modal-det__slider">
+                        <div class="modal-det__slider__main">
+                            <img src="img/modal/modal-det/img1.jpg" alt="flat">
+                        </div>
+
+                        <div class="modal-det__slider__wrap">
+
+                            <svg class="modal-det__slider__arrow modal-det__slider__arrow--prev" width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 1.15417L1 10.1542L10 19.1542" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                            <svg class="modal-det__slider__arrow modal-det__slider__arrow--next" width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1.15417L10 10.1542L1 19.1542" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                            <div class="modal-det__slider__window">
+
+                                <div class="modal-det__slider__row">
+    
+                                    <div class="modal-det__slider__card modal-det__slider__card--active">
+                                        <div class="modal-det__slider__card__content">
+                                            <img src="img/modal/modal-det/img1.jpg" alt="flat">
+                                        </div>
+                                    </div>
+    
+                                    <div class="modal-det__slider__card">
+                                        <div class="modal-det__slider__card__content">
+                                            <img src="img/modal/modal-det/img2.jpg" alt="flat">
+                                        </div>
+                                    </div>
+    
+                                    <div class="modal-det__slider__card">
+                                        <div class="modal-det__slider__card__content">
+                                            <img src="img/modal/modal-det/img3.jpg" alt="flat">
+                                        </div>
+                                    </div>
+    
+                                    <div class="modal-det__slider__card">
+                                        <div class="modal-det__slider__card__content">
+                                            <img src="img/modal/modal-det/img4.jpg" alt="flat">
+                                        </div>
+                                    </div>
+    
+                                    <div class="modal-det__slider__card">
+                                        <div class="modal-det__slider__card__content">
+                                            <img src="img/modal/modal-det/img1.jpg" alt="flat">
+                                        </div>
+                                    </div>
+    
+                                    <div class="modal-det__slider__card">
+                                        <div class="modal-det__slider__card__content">
+                                            <img src="img/modal/modal-det/img2.jpg" alt="flat">
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-det__slider__progress">
+                            <div class="modal-det__slider__progress__inner"></div>
+                        </div>
+                    </div>
+
+                    <div class="modal-det__charact">
+                        <p class="modal-det__charact__title">Характеристики</p>
+
+                        <div class="modal-det__charact__box">
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon1.png" alt="address">
+                                    <span>Адрес</span>
+                                </div>
+
+                                <a href="#" class="modal-det__charact__item__text">Турция, Мерсин, Эрдемли</a>
+                            </div>
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon2.png" alt="address">
+                                    <span>Расположение</span>
+                                </div>
+
+                                <p class="modal-det__charact__item__text">у моря, в большом городе</p>
+                            </div>
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon3.png" alt="address">
+                                    <span>Цена продажи</span>
+                                </div>
+
+                                <p class="modal-det__charact__item__text">2 000 000 ₺</p>
+                            </div>
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon4.png" alt="address">
+                                    <span>Цена за м2</span>
+                                </div>
+
+                                <p class="modal-det__charact__item__text">12 000 ₺</p>
+                            </div>
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon5.png" alt="address">
+                                    <span>Площадь</span>
+                                </div>
+
+                                <p class="modal-det__charact__item__text">180 м²</p>
+                            </div>
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon6.png" alt="address">
+                                    <span>Всего комнат</span>
+                                </div>
+
+                                <p class="modal-det__charact__item__text">4+1 дуплекс (два отдельных входа)</p>
+                            </div>
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon7.png" alt="address">
+                                    <span>Кол-во спален</span>
+                                </div>
+
+                                <p class="modal-det__charact__item__text">1</p>
+                            </div>
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon8.png" alt="address">
+                                    <span>Кол-во ванных</span>
+                                </div>
+
+                                <p class="modal-det__charact__item__text">1</p>
+                            </div>
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon9.png" alt="address">
+                                    <span>Этаж</span>
+                                </div>
+
+                                <p class="modal-det__charact__item__text">12</p>
+                            </div>
+
+                            <div class="modal-det__charact__item">
+                                <div class="modal-det__charact__item__header">
+                                    <img src="img/modal/modal-det/icons/icon10.png" alt="address">
+                                    <span>Этажность</span>
+                                </div>
+
+                                <p class="modal-det__charact__item__text">25</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-det__description">
+                    <div class="modal-det__description__box">
+                        <p class="modal-det__description__title">Особенности:</p>
+                        <ul class="modal-det__ul">
+                            <li class="modal-det__li">4+1 180 м2 дуплекс (два отдельных входа)</li>
+                            <li class="modal-det__li">верхний этаж сдается в аренду</li>
+                            <li class="modal-det__li">отдельная кухня</li>
+                            <li class="modal-det__li">удобные комнаты</li>
+                            <li class="modal-det__li">нижняя подсекция: зал, спальня, детская комната, кухня, ванная + алатурка туалет, балкон</li>
+                            <li class="modal-det__li">верхняя подсекция: зал, спальня, американская кухня, ванная, балкон</li>
+                            <li class="modal-det__li">стороны: юг / восход / запад</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-det__description__box">
+                        <p class="modal-det__description__title">Местоположение</p>
+                        <ul class="modal-det__ul">
+                            <li class="modal-det__li">район кепез эмек</li>
+                            <li class="modal-det__li">​недалеко от трамвайной линии и обводной дороги</li>
+                            <li class="modal-det__li">автобусная остановка - 2 мин</li>
+                            <li class="modal-det__li">районный рынок - 2 мин</li>
+                            <li class="modal-det__li">сетевые супермаркеты и пекарня в шаговой доступности</li>
+                            <li class="modal-det__li">государственная школа</li>
+                            <li class="modal-det__li">клиника здоровья (семейный врач)</li>
+                            <li class="modal-det__li">муниципалитет кепеза</li>
+                            <li class="modal-det__li">египетский базар</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="button-r modal-det__button">
+                    <span>Подробнее</span>
+                    <div class="button-r__wrap">
+                        <svg>
+                            <clipPath id="svgPathModalDet">
+                                <path d="M 15,0
+                                    Q 5,0 5,10
+                                    Q 0,38 5,66
+                                    Q 5,76 15,76"
+                                />
+                                <path class="path" d="M 15,0
+                                    Q 5,0 5,10
+                                    Q 0,38 5,66
+                                    Q 5,76 15,76"
+                                />
+                                <rect x="15" width="calc(100% - 30px)" height="100%" />
+                            </clipPath>
+                        </svg>
+
+                        <svg>
+                            <clipPath id="svgPathModalDetM">
+                                <path d="M 15,0
+                                    Q 5,0 5,10
+                                    Q 0,33 5,56
+                                    Q 5,66 15,66"
+                                />
+                                <path class="path" d="M 15,0
+                                    Q 5,0 5,10
+                                    Q 0,33 5,56
+                                    Q 5,66 15,66"
+                                />
+                            <rect x="15" width="calc(100% - 30px)" height="100%"/>
+                            </clipPath>
+                        </svg>
+                    </div>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

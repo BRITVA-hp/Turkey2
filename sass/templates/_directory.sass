@@ -1,0 +1,242 @@
+.directory
+    padding-top: 200px
+    background: url(../img/directory/bg.webp) no-repeat center top/100%
+    &__pagination
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 12px
+        flex-wrap: wrap
+        margin-bottom: 80px
+        &__item
+            width: 32px
+            height: 32px
+            display: flex
+            align-items: center
+            justify-content: center
+            font-weight: 300
+            font-size: 20px
+            line-height: 130%
+            color: #434343
+            border-radius: 50%
+            border: 1px solid transparent
+            &--active
+                border: 1px solid #000000
+    &__row
+        display: flex
+        flex-wrap: wrap
+        max-width: 1156px
+        align-items: stretch
+        justify-content: center
+        margin: auto
+        margin-bottom: 70px
+    &__card
+        width: 50%
+        display: flex
+        align-items: stretch
+        gap: 30px
+        padding: 45px
+        border-radius: 28px
+        &--active
+            background: #FFFFFF
+            box-shadow: 0px 0px 56.129px rgba(0, 0, 0, 0.15)
+        &__wrap
+            margin-bottom: 15px
+        &__button
+            font-weight: 500
+            font-size: 14px
+            line-height: 130%
+            display: flex
+            align-items: center
+            color: rgba(64, 64, 64, 0.8)
+            gap: 10px
+            cursor: pointer
+        &__price
+            font-weight: 900
+            font-size: 23px
+            line-height: 120%
+            background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
+        &__description
+            font-weight: normal
+            font-size: 14px
+            line-height: 120%
+            color: rgba(64, 64, 64, 0.7)
+            margin-bottom: 20px
+        &__box
+            padding-top: 10px
+            padding-bottom: 10px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__title
+            font-weight: bold
+            font-size: 16px
+            line-height: 120%
+            color: #404040
+            margin-bottom: 30px
+        &__img
+            min-width: 276px
+            width: 276px
+            height: 298px
+            display: flex
+            align-items: center
+            justify-content: center
+            overflow: hidden
+            border-radius: 14px
+            img
+                max-width: none
+    &__filter
+        width: 100%
+        background: #FFFFFF
+        box-shadow: 0px 0px 56.129px rgba(0, 0, 0, 0.15)
+        border-radius: 20px
+        padding: 58px
+        margin-bottom: 60px
+        &__button
+            background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%)
+            box-shadow: inset 0px -2.58462px 3px rgba(0, 0, 0, 0.25)
+            font-weight: normal
+            font-size: 14px
+            line-height: 130%
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            color: #393939
+            border: none
+            width: 203px
+            height: 46px
+            cursor: pointer
+            clip-path: path('M 13,0 Q 3,0 3,10 Q 0,23 3,36 Q 3,46 13,46 H 190 Q 200,46 200,36 Q 203,23 200,10 Q 200,0 190,0 H 13 Z')
+            transition: 0.3s
+            &:hover
+                transform: scale(1.02)
+        &__rooms
+            display: flex
+            &__radio
+                display: flex
+                align-items: center
+                cursor: pointer
+                &__ok
+                    width: 15px
+                    height: 15px
+                    border: 1px solid rgba(0, 0, 0, 0.4)
+                    margin-right: 10px
+                    position: relative
+                    &::after
+                        content: ''
+                        position: absolute
+                        left: 1px
+                        right: 1px
+                        top: 1px
+                        bottom: 1px
+                        background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%)
+                        display: none 
+                &__text
+                    font-weight: 300
+                    font-size: 14px
+                    line-height: 120%
+                    color: #404040
+                &__input
+                    display: none
+                    &:checked + .directory__filter__rooms__radio__ok
+                        &::after
+                            display: block
+                        
+            &__row
+                display: flex
+                gap: 20px
+            &__title
+                margin-right: 25px
+                font-weight: 300
+                font-size: 16px
+                line-height: 120%
+                color: #404040
+                display: flex
+                align-items: center
+                img
+                    margin-right: 20px
+        &__row
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &--top
+                margin-bottom: 30px
+        &__input-group
+            margin-bottom: 0
+            &--date
+                width: 25%
+        &__input
+            width: 100%
+            border: 1px solid rgba(0, 0, 0, 0.4)
+            font-weight: normal
+            font-size: 13px
+            line-height: 130%
+            color: rgba(67, 67, 67, 0.6)
+            padding: 14px
+            &:focus
+                outline: none
+            &--left
+                border-right: none
+            &--date
+                padding: 10px 10px 10px 20px
+                position: relative
+                padding-left: 45px
+                &::-webkit-calendar-picker-indicator
+                    color: rgba(0, 0, 0, 0)
+                    background: url(../img/directory/icon3.png) no-repeat center
+                    opacity: 1
+                    display: block
+                    width: 20px
+                    height: 20px
+                    cursor: pointer
+                    border-width: thin
+                    position: absolute
+                    left: 14px
+                    top: 50%
+                    transform: translateY(-50%)
+        &__wrap
+            display: flex
+            width: 100%
+        &__block
+            width: 50%
+            &__title
+                font-weight: 300
+                font-size: 16px
+                line-height: 120%
+                color: #404040
+                margin-bottom: 20px
+                display: flex
+                align-items: center
+                gap: 15px
+        &__tabs
+            display: flex
+            gap: 35px
+            margin-bottom: 50px
+            &__item
+                font-weight: 300
+                font-size: 18px
+                line-height: 130%
+                color: #434343
+                cursor: pointer
+                position: relative
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 100%
+                    height: 1px
+                    left: 0
+                    bottom: 0
+                    background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%)
+                    display: none
+                &--active
+                    background: linear-gradient(83.57deg, #AA8A5D 5.68%, #EFC484 37.6%, #C9A36F 68%, #AB8B5D 94.48%)
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
+                    background-clip: text
+                    text-fill-color: transparent
+                    font-weight: 800
+                    &::after
+                        display: block
